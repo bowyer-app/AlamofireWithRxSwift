@@ -13,6 +13,8 @@
 		F7D1A7191D151327002DD6A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D1A7171D151327002DD6A4 /* Assets.xcassets */; };
 		F7D1A71D1D15135F002DD6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1A71C1D15135F002DD6A4 /* AppDelegate.swift */; };
 		F7D1A7211D151A95002DD6A4 /* GithubUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1A7201D151A95002DD6A4 /* GithubUserViewController.swift */; };
+		F7D1A7251D151B09002DD6A4 /* UserViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1A7231D151B09002DD6A4 /* UserViewCell.swift */; };
+		F7D1A7261D151B09002DD6A4 /* UserViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D1A7241D151B09002DD6A4 /* UserViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F7D1A71B1D15135F002DD6A4 /* github-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "github-Bridging-Header.h"; sourceTree = "<group>"; };
 		F7D1A71C1D15135F002DD6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Application/AppDelegate.swift; sourceTree = "<group>"; };
 		F7D1A7201D151A95002DD6A4 /* GithubUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubUserViewController.swift; path = Controllers/GithubUserViewController.swift; sourceTree = "<group>"; };
+		F7D1A7231D151B09002DD6A4 /* UserViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewCell.swift; path = View/UserViewCell.swift; sourceTree = "<group>"; };
+		F7D1A7241D151B09002DD6A4 /* UserViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserViewCell.xib; path = View/UserViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		F792374F1D150DF600BDB9F1 /* github */ = {
 			isa = PBXGroup;
 			children = (
+				F7D1A7221D151ACF002DD6A4 /* View */,
 				F7D1A7121D15109F002DD6A4 /* Application */,
 				F7D1A71A1D15134D002DD6A4 /* Controllers */,
 				F7D1A7131D1512BF002DD6A4 /* Resources */,
@@ -110,6 +115,15 @@
 				F7D1A7201D151A95002DD6A4 /* GithubUserViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F7D1A7221D151ACF002DD6A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7D1A7231D151B09002DD6A4 /* UserViewCell.swift */,
+				F7D1A7241D151B09002DD6A4 /* UserViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +190,7 @@
 				F7D1A7181D151327002DD6A4 /* Info.plist in Resources */,
 				F7D1A7191D151327002DD6A4 /* Assets.xcassets in Resources */,
 				F7D1A7151D1512EF002DD6A4 /* LaunchScreen.storyboard in Resources */,
+				F7D1A7261D151B09002DD6A4 /* UserViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D1A7251D151B09002DD6A4 /* UserViewCell.swift in Sources */,
 				F7D1A7211D151A95002DD6A4 /* GithubUserViewController.swift in Sources */,
 				F7D1A71D1D15135F002DD6A4 /* AppDelegate.swift in Sources */,
 			);
