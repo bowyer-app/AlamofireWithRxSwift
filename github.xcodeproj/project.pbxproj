@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F65939B54BC5BCCE57499E1 /* Pods_github.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E27DD464BC8E68C8B04C155 /* Pods_github.framework */; };
+		F78A4D871D152EFE0095AC36 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78A4D861D152EFE0095AC36 /* SafariServices.framework */; };
 		F7D1A7151D1512EF002DD6A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1A7141D1512EF002DD6A4 /* LaunchScreen.storyboard */; };
 		F7D1A7181D151327002DD6A4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7D1A7161D151327002DD6A4 /* Info.plist */; };
 		F7D1A7191D151327002DD6A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D1A7171D151327002DD6A4 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		2E27DD464BC8E68C8B04C155 /* Pods_github.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_github.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		474A7570981BAA14C95009DB /* Pods-github.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github.debug.xcconfig"; path = "Pods/Target Support Files/Pods-github/Pods-github.debug.xcconfig"; sourceTree = "<group>"; };
 		EB53062DC4469B672587827E /* Pods-github.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github.release.xcconfig"; path = "Pods/Target Support Files/Pods-github/Pods-github.release.xcconfig"; sourceTree = "<group>"; };
+		F78A4D861D152EFE0095AC36 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		F792374D1D150DF600BDB9F1 /* github.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = github.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D1A7141D1512EF002DD6A4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7D1A7161D151327002DD6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78A4D871D152EFE0095AC36 /* SafariServices.framework in Frameworks */,
 				5F65939B54BC5BCCE57499E1 /* Pods_github.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +54,7 @@
 		6FDA709F9D0DF7F95EBDD816 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F78A4D861D152EFE0095AC36 /* SafariServices.framework */,
 				2E27DD464BC8E68C8B04C155 /* Pods_github.framework */,
 			);
 			name = Frameworks;

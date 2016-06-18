@@ -8,6 +8,7 @@
 
 import Hakuba
 import RxSwift
+import SafariServices
 
 class GithubUserViewController: UITableViewController {
 
@@ -37,7 +38,8 @@ class GithubUserViewController: UITableViewController {
             .subscribeNext { [weak self] users in
                 let userModels = users.map{user -> UserViewCellModel in
                     return UserViewCellModel(userName: user.name as String, imageUrl: user.avatarUrl!){[weak self] _ in
-                        // TODO call Safariview
+                        let safariviewController = SFSafariViewController(URL: user.url!, entersReaderIfAvailable: true)
+                        self!.presentViewController(safariviewController, animated: true, completion: nil)
                     }
                 }
                 let section = Section().reset(userModels)
