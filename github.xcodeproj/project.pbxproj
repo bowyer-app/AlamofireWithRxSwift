@@ -12,7 +12,7 @@
 		F7D1A7181D151327002DD6A4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7D1A7161D151327002DD6A4 /* Info.plist */; };
 		F7D1A7191D151327002DD6A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D1A7171D151327002DD6A4 /* Assets.xcassets */; };
 		F7D1A71D1D15135F002DD6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1A71C1D15135F002DD6A4 /* AppDelegate.swift */; };
-		F7D1A71F1D151374002DD6A4 /* GithubUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1A71E1D151374002DD6A4 /* GithubUserViewController.swift */; };
+		F7D1A7211D151A95002DD6A4 /* GithubUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1A7201D151A95002DD6A4 /* GithubUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		F7D1A7171D151327002DD6A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		F7D1A71B1D15135F002DD6A4 /* github-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "github-Bridging-Header.h"; sourceTree = "<group>"; };
 		F7D1A71C1D15135F002DD6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Application/AppDelegate.swift; sourceTree = "<group>"; };
-		F7D1A71E1D151374002DD6A4 /* GithubUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubUserViewController.swift; path = Controllers/GithubUserViewController.swift; sourceTree = "<group>"; };
+		F7D1A7201D151A95002DD6A4 /* GithubUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubUserViewController.swift; path = Controllers/GithubUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		F7D1A71A1D15134D002DD6A4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F7D1A71E1D151374002DD6A4 /* GithubUserViewController.swift */,
+				F7D1A7201D151A95002DD6A4 /* GithubUserViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7D1A71F1D151374002DD6A4 /* GithubUserViewController.swift in Sources */,
+				F7D1A7211D151A95002DD6A4 /* GithubUserViewController.swift in Sources */,
 				F7D1A71D1D15135F002DD6A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
