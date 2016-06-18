@@ -39,8 +39,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="iconImage" destination="tdK-XQ-9pu" id="NyP-5O-4La"/>
-                <outlet property="nameLabel" destination="6bf-ES-rDF" id="yf6-F4-9yr"/>
+                <outlet property="iconImage" destination="tdK-XQ-9pu" id="K8J-UT-mXn"/>
+                <outlet property="nameLabel" destination="6bf-ES-rDF" id="qtX-4k-FSs"/>
             </connections>
             <point key="canvasLocation" x="286" y="334"/>
         </tableViewCell>

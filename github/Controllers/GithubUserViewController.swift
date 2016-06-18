@@ -20,14 +20,30 @@ class GithubUserViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        configureTableView()
+        configureHakuba()
+        getUsers()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func configureTableView() {
+        tableView.separatorStyle = .None
     }
-
+    
+    private func configureHakuba() {
+        hakuba.registerCellByNib(UserViewCell)
+    }
+    
+    private func getUsers(){
+        AlamofireManager.sharedInstance.getUsers()
+            .subscribeNext { [weak self] users in
+                let userModels = users.map{user -> UserViewCellModel in
+                    return UserViewCellModel(userName: user.name as String, imageUrl: user.avatarUrl!){[weak self] _ in
+                        // TODO call Safariview
+                    }
+                }
+                let section = Section().reset(userModels)
+                self!.hakuba.reset(section).bump()
+            }.addDisposableTo(disposeBag)
+    }
 
 }
 
