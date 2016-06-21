@@ -36,11 +36,15 @@ class GithubUserViewController: UITableViewController {
     private func getUsers(){
         AlamofireManager.sharedInstance.getUsers()
             .subscribeNext { [weak self] users in
-                let userModels = users.map{user -> UserViewCellModel in
-                    return UserViewCellModel(userName: user.name as String, imageUrl: user.avatarUrl!){[weak self] _ in
-                        let safariviewController = SFSafariViewController(URL: user.url!, entersReaderIfAvailable: true)
+                let userModels = users.flatMap { user -> UserViewCellModel? in
+                    guard let avatarUrl = user.avatarUrl , url = user.url else {
+                        return nil
+                    }
+                    return UserViewCellModel(userName: user.name, imageUrl: avatarUrl) { [weak self] _ in
+                        let safariviewController = SFSafariViewController(URL: url, entersReaderIfAvailable: true)
                         self!.presentViewController(safariviewController, animated: true, completion: nil)
                     }
+                
                 }
                 let section = Section().reset(userModels)
                 self!.hakuba.reset(section).bump()

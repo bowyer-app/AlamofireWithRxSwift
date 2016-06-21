@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F65939B54BC5BCCE57499E1 /* Pods_github.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E27DD464BC8E68C8B04C155 /* Pods_github.framework */; };
+		F72FB36F1D18C694002109BD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72FB36E1D18C694002109BD /* StringExtension.swift */; };
 		F78A4D871D152EFE0095AC36 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78A4D861D152EFE0095AC36 /* SafariServices.framework */; };
 		F7D1A7151D1512EF002DD6A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1A7141D1512EF002DD6A4 /* LaunchScreen.storyboard */; };
 		F7D1A7181D151327002DD6A4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7D1A7161D151327002DD6A4 /* Info.plist */; };
@@ -24,6 +25,7 @@
 		2E27DD464BC8E68C8B04C155 /* Pods_github.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_github.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		474A7570981BAA14C95009DB /* Pods-github.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github.debug.xcconfig"; path = "Pods/Target Support Files/Pods-github/Pods-github.debug.xcconfig"; sourceTree = "<group>"; };
 		EB53062DC4469B672587827E /* Pods-github.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github.release.xcconfig"; path = "Pods/Target Support Files/Pods-github/Pods-github.release.xcconfig"; sourceTree = "<group>"; };
+		F72FB36E1D18C694002109BD /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extensions/StringExtension.swift; sourceTree = "<group>"; };
 		F78A4D861D152EFE0095AC36 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		F792374D1D150DF600BDB9F1 /* github.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = github.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D1A7141D1512EF002DD6A4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F72FB36D1D18C649002109BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F72FB36E1D18C694002109BD /* StringExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		F79237441D150DF600BDB9F1 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 			children = (
 				F7D1A7121D15109F002DD6A4 /* Application */,
 				F7D1A71A1D15134D002DD6A4 /* Controllers */,
+				F72FB36D1D18C649002109BD /* Extensions */,
 				F7D1A72A1D151D66002DD6A4 /* Models */,
 				F7D1A7271D151D27002DD6A4 /* Managers */,
 				F7D1A7221D151ACF002DD6A4 /* View */,
@@ -277,6 +288,7 @@
 			files = (
 				F7D1A7291D151D45002DD6A4 /* AlamofireManager.swift in Sources */,
 				F7D1A7251D151B09002DD6A4 /* UserViewCell.swift in Sources */,
+				F72FB36F1D18C694002109BD /* StringExtension.swift in Sources */,
 				F7D1A7211D151A95002DD6A4 /* GithubUserViewController.swift in Sources */,
 				F7D1A72C1D151DB4002DD6A4 /* User.swift in Sources */,
 				F7D1A71D1D15135F002DD6A4 /* AppDelegate.swift in Sources */,

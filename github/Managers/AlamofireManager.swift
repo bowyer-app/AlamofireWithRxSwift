@@ -14,28 +14,28 @@ import SwiftyJSON
 
 class AlamofireManager {
     
-    let USER_API = "https://api.github.com/users?since=0"
+    private let userApi = "https://api.github.com/users?since=0"
     
     static let sharedInstance: AlamofireManager = AlamofireManager()
     
     private init() {}
     
     func getUsers() -> Observable<[User]> {
-        return getJson(USER_API).map{json -> [User] in return self.convertUsers(json!)};
+        return getJson(userApi).map{ self.convertUsers($0) }
     }
     
-    private func convertUsers(json:SwiftyJSON.JSON) -> [User]{
+    private func convertUsers(json:JSON) -> [User] {
         var users :[User] = []
         guard let data = json.array else {
             return users
         }
         
         data.toObservable()
-            .map{result -> User in
-                let name = result["login"].string
-                let url = result["html_url"].string
-                let avatarUrl = result["avatar_url"].string
-                return User(name: name!, url: NSURL(string: url!)!, avatarUrl: NSURL(string: avatarUrl!)!)
+            .map { result -> User in
+                let name = result["login"].string ?? ""
+                let url = result["html_url"].string?.url
+                let avatarUrl = result["avatar_url"].string?.url
+                return User(name: name, url: url, avatarUrl: avatarUrl)
         }.doOnNext { user in
             users.append(user)
         }.subscribe().dispose()
@@ -43,14 +43,14 @@ class AlamofireManager {
         return users;
     }
     
-    private func getJson(url :String) -> Observable<SwiftyJSON.JSON?> {
+    private func getJson(url :String) -> Observable<JSON> {
         return Observable.create{ observer in
             let request = Alamofire.request(.GET, url)
-                .responseSwiftyJSON({ (request, response, json, error) in
-                    if((error) != nil){
-                        observer.onError(error!)
+                .responseSwiftyJSON( { (request, response, json, error) in
+                    if let error = error {
+                        observer.onError(error)
                     }else{
-                        observer.onNext(json);
+                        observer.onNext(json)
                         observer.onCompleted()
                     }
                 });
