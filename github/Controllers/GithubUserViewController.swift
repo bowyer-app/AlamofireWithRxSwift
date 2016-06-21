@@ -36,7 +36,7 @@ class GithubUserViewController: UITableViewController {
     private func getUsers(){
         AlamofireManager.sharedInstance.getUsers()
             .subscribeNext { [weak self] users in
-                let userModels = users.flatMap{ user -> UserViewCellModel? in
+                let userModels = users.flatMap { user -> UserViewCellModel? in
                     guard let avatarUrl = user.avatarUrl , url = user.url else {
                         return nil
                     }

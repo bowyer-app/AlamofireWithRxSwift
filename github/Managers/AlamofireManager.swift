@@ -24,14 +24,14 @@ class AlamofireManager {
         return getJson(userApi).map{ self.convertUsers($0) }
     }
     
-    private func convertUsers(json:JSON) -> [User]{
+    private func convertUsers(json:JSON) -> [User] {
         var users :[User] = []
         guard let data = json.array else {
             return users
         }
         
         data.toObservable()
-            .map{result -> User in
+            .map { result -> User in
                 let name = result["login"].string ?? ""
                 let url = result["html_url"].string?.url
                 let avatarUrl = result["avatar_url"].string?.url
@@ -46,11 +46,11 @@ class AlamofireManager {
     private func getJson(url :String) -> Observable<JSON> {
         return Observable.create{ observer in
             let request = Alamofire.request(.GET, url)
-                .responseSwiftyJSON({ (request, response, json, error) in
+                .responseSwiftyJSON( { (request, response, json, error) in
                     if let error = error {
                         observer.onError(error)
                     }else{
-                        observer.onNext(json);
+                        observer.onNext(json)
                         observer.onCompleted()
                     }
                 });
