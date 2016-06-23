@@ -7,8 +7,8 @@
 //
 
 struct User {
-    var name:String
-    var url:NSURL?
-    var avatarUrl:NSURL?
+    let name:String
+    let url:NSURL?
+    let avatarUrl:NSURL?
 }
 
